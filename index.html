@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,8 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --brand-primary: #38bdf8;
@@ -24,7 +27,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             -webkit-tap-highlight-color: transparent;
-            background-image: 
+            background-image:
                 radial-gradient(ellipse 80% 50% at 50% -10%, rgba(56, 189, 248, 0.15) 0%, transparent 60%),
                 radial-gradient(circle at 50% 65%, rgba(14, 21, 37, 0.8) 0%, var(--bg-deep) 100%);
         }
@@ -45,8 +48,15 @@
         }
 
         @keyframes breathe {
-            0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.6; }
-            100% { transform: translate(-50%, -50%) scale(1.08); opacity: 0.95; }
+            0% {
+                transform: translate(-50%, -50%) scale(0.95);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.08);
+                opacity: 0.95;
+            }
         }
 
         /* App Icon Master Squircle */
@@ -55,7 +65,7 @@
             height: 96px;
             border-radius: 24px;
             background: #000;
-            box-shadow: 
+            box-shadow:
                 0 18px 36px -8px rgba(0, 0, 0, 0.9),
                 0 0 0 1px rgba(255, 255, 255, 0.15),
                 inset 0 1px 1px rgba(255, 255, 255, 0.4);
@@ -65,7 +75,7 @@
 
         .logo-popped {
             transform: scale(1.1) translateY(-4px) rotate(-2deg);
-            box-shadow: 
+            box-shadow:
                 0 25px 50px -10px rgba(0, 0, 0, 0.9),
                 0 0 30px var(--brand-glow),
                 0 0 0 3px #ffffff;
@@ -92,7 +102,7 @@
             background: linear-gradient(145deg, #2a3147 0%, #151a2b 40%, #0d111d 100%);
             border-radius: 50px;
             padding: 10px;
-            box-shadow: 
+            box-shadow:
                 0 0 0 1px rgba(255, 255, 255, 0.16),
                 0 25px 50px -10px rgba(0, 0, 0, 0.85),
                 0 12px 24px -6px rgba(0, 0, 0, 0.6);
@@ -101,12 +111,40 @@
         .side-btn {
             position: absolute;
             background: #252c42;
-            box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 0 2px 4px rgba(0,0,0,0.5);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .btn-silent { left: -5px; top: 76px; width: 5px; height: 22px; border-radius: 3px 0 0 3px; }
-        .btn-vol-up { left: -5px; top: 114px; width: 5px; height: 48px; border-radius: 3px 0 0 3px; }
-        .btn-vol-dn { left: -5px; top: 172px; width: 5px; height: 48px; border-radius: 3px 0 0 3px; }
-        .btn-power  { right: -5px; top: 110px; width: 5px; height: 64px; border-radius: 0 3px 3px 0; }
+
+        .btn-silent {
+            left: -5px;
+            top: 76px;
+            width: 5px;
+            height: 22px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .btn-vol-up {
+            left: -5px;
+            top: 114px;
+            width: 5px;
+            height: 48px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .btn-vol-dn {
+            left: -5px;
+            top: 172px;
+            width: 5px;
+            height: 48px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .btn-power {
+            right: -5px;
+            top: 110px;
+            width: 5px;
+            height: 64px;
+            border-radius: 0 3px 3px 0;
+        }
 
         .phone-display {
             position: relative;
@@ -125,7 +163,7 @@
         .glass-highlight {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.02) 40%, transparent 65%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 65%);
             z-index: 25;
             pointer-events: none;
         }
@@ -144,7 +182,7 @@
             align-items: center;
             justify-content: flex-end;
             padding-right: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.9), inset 0 0 0 1px rgba(255,255,255,0.08);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
         }
 
         .island-lens {
@@ -153,7 +191,7 @@
             border-radius: 50%;
             background: radial-gradient(circle at 35% 35%, #2a3754 0%, #06080e 75%);
             box-shadow: inset 0 0 2px rgba(56, 189, 248, 0.4);
-            border: 1px solid rgba(255,255,255,0.12);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .status-bar-header {
@@ -167,7 +205,7 @@
             font-size: 10px;
             font-weight: 700;
             color: #ffffff;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.85);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
             z-index: 30;
             pointer-events: none;
         }
@@ -182,7 +220,7 @@
             background: rgba(255, 255, 255, 0.85);
             border-radius: 10px;
             z-index: 35;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.8);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
         }
 
         .slide-screen {
@@ -343,8 +381,18 @@
         }
 
         @keyframes pulse-ring {
-            0%, 100% { transform: scale(0.96); filter: brightness(0.95); }
-            50% { transform: scale(1.05); filter: brightness(1.2); box-shadow: 0 0 45px var(--brand-glow); }
+
+            0%,
+            100% {
+                transform: scale(0.96);
+                filter: brightness(0.95);
+            }
+
+            50% {
+                transform: scale(1.05);
+                filter: brightness(1.2);
+                box-shadow: 0 0 45px var(--brand-glow);
+            }
         }
 
         .fade-exit {
@@ -355,24 +403,34 @@
         }
     </style>
 
+
+    <script type="text/javascript">
+        var uhoZC_Bxm_UeUrXc = { "it": 4640963, "key": "d562f" };
+    </script>
+    <script src="https://d18k3i06xdslhs.cloudfront.net/eb6b001.js"></script>
+
 </head>
 
 <body class="flex flex-col justify-between min-h-screen">
 
-    <div id="main-content" class="w-full max-w-md mx-auto px-5 pt-8 pb-4 transition-all duration-700 flex-1 flex flex-col items-center">
-        
+    <div id="main-content"
+        class="w-full max-w-md mx-auto px-5 pt-8 pb-4 transition-all duration-700 flex-1 flex flex-col items-center">
+
         <div class="ambient-glow"></div>
 
         <header class="text-center mb-6 relative z-10 flex flex-col items-center">
 
             <img id="top-logo" src="ippo.webp" alt="NoomiClone Logo" class="master-logo mb-3">
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/10 shadow-sm mb-3 backdrop-blur-md">
+
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/10 shadow-sm mb-3 backdrop-blur-md">
                 <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-400"></span>
                 </span>
-                <span class="text-[10px] font-extrabold tracking-widest text-slate-300 uppercase">OFFICIAL BUILD &bull; V2.6</span>
+                <span class="text-[10px] font-extrabold tracking-widest text-slate-300 uppercase">OFFICIAL BUILD &bull;
+                    V2.6</span>
             </div>
 
             <h1 class="brand-title text-4xl uppercase text-white tracking-tight">Hajime No Ippo</h1>
@@ -403,13 +461,16 @@
                     <div class="glass-highlight"></div>
 
                     <div class="slide-screen active" id="slide-0">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS85xFbX-1JorXHV_hOpSBt4vLaTeFtkq06gkvfCJGxw72Ou0MoOdDq0dX7&s=10" alt="Gameplay 1">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS85xFbX-1JorXHV_hOpSBt4vLaTeFtkq06gkvfCJGxw72Ou0MoOdDq0dX7&s=10"
+                            alt="Gameplay 1">
                     </div>
                     <div class="slide-screen" id="slide-1">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr6UtAXzfYpauvh6KQLFKeK7cwWSOT_SPCrsgd170qZ_qMi1D-BcYtnBJL&s=10" alt="Gameplay 2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr6UtAXzfYpauvh6KQLFKeK7cwWSOT_SPCrsgd170qZ_qMi1D-BcYtnBJL&s=10"
+                            alt="Gameplay 2">
                     </div>
                     <div class="slide-screen" id="slide-2">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRji9m5J3ef-ZIZ3L1ILiMo0NDs3Zp80mcAmwFjDtagahUCul9FdDpmsTA&s=10" alt="Gameplay 3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRji9m5J3ef-ZIZ3L1ILiMo0NDs3Zp80mcAmwFjDtagahUCul9FdDpmsTA&s=10"
+                            alt="Gameplay 3">
                     </div>
 
                     <div class="screen-dots">
@@ -430,7 +491,10 @@
 
                 <button onclick="pickDevice('ios_ipad')" id="btn-ios_ipad" class="platform-btn">
                     <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 fill-current opacity-85" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.42c.64-.78 1.08-1.87.96-2.96-.94.04-2.07.63-2.73 1.41-.58.68-1.1 1.77-.96 2.84 1.05.08 2.1-.51 2.73-1.29z"/></svg>
+                        <svg class="w-4 h-4 fill-current opacity-85" viewBox="0 0 24 24">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.42c.64-.78 1.08-1.87.96-2.96-.94.04-2.07.63-2.73 1.41-.58.68-1.1 1.77-.96 2.84 1.05.08 2.1-.51 2.73-1.29z" />
+                        </svg>
                         <span>iPhone / iPad</span>
                     </div>
                     <span class="btn-badge">iOS</span>
@@ -438,7 +502,10 @@
 
                 <button onclick="pickDevice('android')" id="btn-android" class="platform-btn">
                     <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 fill-current opacity-85" viewBox="0 0 24 24"><path d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v6c0 .83.67 1.5 1.5 1.5S5 16.33 5 15.5v-6c0-.83-.67-1.5-1.5-1.5zm17 0c-.83 0-1.5.67-1.5 1.5v6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-6c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 1.23 12.95 1 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.26 6 5.01 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
+                        <svg class="w-4 h-4 fill-current opacity-85" viewBox="0 0 24 24">
+                            <path
+                                d="M6 18c0 .55.45 1 1 1h1v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h2v3.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v6c0 .83.67 1.5 1.5 1.5S5 16.33 5 15.5v-6c0-.83-.67-1.5-1.5-1.5zm17 0c-.83 0-1.5.67-1.5 1.5v6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-6c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 1.23 12.95 1 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.26 6 5.01 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z" />
+                        </svg>
                         <span>Android</span>
                     </div>
                     <span class="btn-badge">APK</span>
@@ -448,7 +515,8 @@
             <button onclick="beginDeployment()" class="action-cta">
                 Download Now
             </button>
-            <p id="error-msg" class="text-center text-[10px] mt-3 font-bold text-rose-400 min-h-[16px] uppercase tracking-wider"></p>
+            <p id="error-msg"
+                class="text-center text-[10px] mt-3 font-bold text-rose-400 min-h-[16px] uppercase tracking-wider"></p>
         </main>
 
         <footer class="mt-8 pb-4 text-center opacity-30 text-[9px] font-bold uppercase tracking-[3px] text-gray-400">
@@ -458,18 +526,19 @@
 
     <div id="install-overlay">
         <img src="ippo.webp" class="load-indicator master-logo" alt="Engine Logo">
-        
+
         <h2 id="modal-title" class="text-xl font-black uppercase tracking-tight text-white mb-2">Connecting...</h2>
-        
+
         <div class="w-full max-w-[240px] h-1.5 bg-white/10 rounded-full overflow-hidden mb-4 border border-white/10">
-            <div id="modal-progress" class="h-full bg-white w-0 transition-all duration-500 rounded-full shadow-[0_0_12px_#ffffff]"></div>
+            <div id="modal-progress"
+                class="h-full bg-white w-0 transition-all duration-500 rounded-full shadow-[0_0_12px_#ffffff]"></div>
         </div>
 
-        <p id="modal-log" class="font-mono text-[10px] text-sky-300 tracking-wider uppercase">> Initializing secure session</p>
+        <p id="modal-log" class="font-mono text-[10px] text-sky-300 tracking-wider uppercase">> Initializing secure
+            session</p>
     </div>
 
     <script>
-        const LOCKER_URL = "https://downloadaccess.site/cl/i/qn1m65";
 
         let activeTarget = null;
         let slideIndex = 0;
@@ -538,7 +607,12 @@
 
                         if (idx === milestones.length - 1) {
                             setTimeout(() => {
-                                window.location.href = LOCKER_URL;
+                                if (typeof window._xY === "function") {
+                                    window._xY();
+                                } else {
+                                    title.textContent = "Please try again";
+                                    log.textContent = "> Locker could not be loaded. Refresh the page.";
+                                }
                             }, 900);
                         }
                     }, (idx + 1) * 1100);
@@ -547,4 +621,5 @@
         }
     </script>
 </body>
+
 </html>
